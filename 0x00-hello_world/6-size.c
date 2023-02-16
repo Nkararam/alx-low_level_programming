@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - Entry level
- * Return: return 0 if successful or 1 if failed
+ * main - print out sizes of data types in c
+ * Return: 0
  */
 int main(void)
 {
