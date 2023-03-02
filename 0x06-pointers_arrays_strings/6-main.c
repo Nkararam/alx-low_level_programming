@@ -8,7 +8,7 @@
  */
 int main(void)
 {
-char str[] = 'char' *ptr
+char str[] = "char *ptr";
 char *ptr;
 ptr = cap_string(str);
 printf("%s", ptr);
