@@ -8,7 +8,7 @@ void free_listint2(listint_t **head)
 {
 
 listint_t *temp, *newNode;
-if (head == NULL)
+if(*head == NULL)
 return;
 temp = *head;
 while (newNode != NULL)
