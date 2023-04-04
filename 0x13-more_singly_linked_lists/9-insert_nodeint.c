@@ -31,6 +31,7 @@ if (i == idx - 1)
 {
 newnode->next = temp->next;
 temp->next = newnode;
+return (newnode);
 }
 else
 temp = temp->next;
