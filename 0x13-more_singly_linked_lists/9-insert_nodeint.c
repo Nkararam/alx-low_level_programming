@@ -23,6 +23,7 @@ if (idx == 0)
 {
 newnode->next = *head;
 *head = newnode;
+return (newnode);
 }
 for (i = 0; temp && i < idx; i++)
 {
@@ -30,7 +31,6 @@ if (i == idx - 1)
 {
 newnode->next = temp->next;
 temp->next = newnode;
-return (newnode);
 }
 else
 temp = temp->next;
