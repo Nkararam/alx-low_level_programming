@@ -12,7 +12,7 @@ listint_t *nextnode;
 listint_t *prevnode;
 listint_t *currentnode;
 prevnode = NULL;
-currentnode=nextnode=*head;
+currentnode = nextnode = *head;
 while (nextnode != NULL)
 {
 nextnode = nextnode->next;
