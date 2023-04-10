@@ -19,7 +19,7 @@ for (size = 0; text_content[size]; size++)
 ;
 }
 
-fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0600);
+fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fd == -1)
 return (-1);
 
