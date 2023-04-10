@@ -27,7 +27,7 @@ return (0);
 wt = write(STDOUT_FILENO, buffer, rd);
 if (wt < rd)
 {
-free (buffer);
+free(buffer);
 return (0);
 }
 free(buffer);
