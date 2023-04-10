@@ -25,7 +25,6 @@ return (-1);
 
 wt = write(fd, text_content, size);
 if (wt == -1)
-return (-1);
 {
 close(fd);
 return (-1);
