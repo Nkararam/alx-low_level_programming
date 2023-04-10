@@ -22,12 +22,15 @@ for (size = 0; text_content[size]; size++)
 fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, S_IRUSR | S_IWUSR);
 if (fd == -1)
 return (-1);
+if (text_content != NULL)
+{
 
 wt = write(fd, text_content, size);
-if (wt == -1)
+if (wt == -1 || wt != size)
 {
 close(fd);
 return (-1);
+}
 }
 
 close(fd);
