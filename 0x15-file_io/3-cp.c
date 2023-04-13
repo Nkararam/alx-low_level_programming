@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 #include <fcntl.h>
-
+#include "main.h"
 #define BUFSIZE 1024
 
 /**
