@@ -15,7 +15,7 @@
  */
 static ssize_t read_file(const char *file, char **buf, int fd)
 {
-int r;
+ssize_t r;
 if (fd < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
@@ -31,12 +31,6 @@ exit(98);
 }
 }
 r = read(fd, *buf, BUFSIZE);
-if (r < 0)
-{
-free(*buf);
-dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
-exit(98);
-}
 return (r);
 }
 /**
@@ -60,7 +54,7 @@ exit(100);
  *
  * Return: 0 on success, 97-100 on failure.
  */
-int main(int argc, const char *argv[])
+int main(int argc, char *argv[])
 {
 int source_file, target_file;
 ssize_t bytes_read;
@@ -89,10 +83,11 @@ if (bytes_read < 0)
 {
 close_file(source_file);
 close_file(target_file);
-exit(98);
+exit(99);
 }
-if (write(target_file, buffer, bytes_read) < 0)
+if (write(target_file, buffer, bytes_read) != bytes_read)
 {
+dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 close_file(source_file);
 close_file(target_file);
 exit(99);
