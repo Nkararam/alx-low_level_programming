@@ -75,7 +75,7 @@ if (target_file < 0)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 close_file(source_file);
-exit(99);
+exit(98);
 }
 while ((bytes_read = read_file(argv[1], &buffer, source_file)))
 {
