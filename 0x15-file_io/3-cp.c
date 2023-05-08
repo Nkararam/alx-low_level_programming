@@ -4,15 +4,14 @@
 #include <fcntl.h>
 #include "main.h"
 #define BUFSIZE 1024
-
 /**
- * read_file - function that reads a file into a buffer
- * @file: file to read from
- * @buf: pointer to a pointer of a buffer.
- * @fd: file descriptor
- *
- * Return: the number of bytes read.
- */
+* read_file - function that reads a file into a buffer
+* @file: file to read from
+* @buf: pointer to a pointer of a buffer.
+* @fd: file descriptor
+*
+* Return: the number of bytes read.
+*/
 static ssize_t read_file(const char *file, char **buf, int fd)
 {
 ssize_t r;
@@ -34,9 +33,9 @@ r = read(fd, *buf, BUFSIZE);
 return (r);
 }
 /**
- * close_file - Closes file descriptors.
- * @fd: The file descriptor to be closed.
- */
+* close_file - Closes file descriptors.
+* @fd: The file descriptor to be closed.
+*/
 void close_file(int fd)
 {
 int x;
@@ -48,12 +47,12 @@ exit(100);
 }
 }
 /**
- * main - copy a file's contents to another file
- * @argc: the argument count
- * @argv: the argument values
- *
- * Return: 0 on success, 97-100 on failure.
- */
+* main - copy a file's contents to another file
+* @argc: the argument count
+* @argv: the argument values
+*
+* Return: 0 on success, 97-100 on failure.
+*/
 int main(int argc, char *argv[])
 {
 int source_file, target_file;
@@ -97,3 +96,4 @@ close_file(source_file);
 close_file(target_file);
 return (0);
 }
+
