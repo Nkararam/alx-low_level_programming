@@ -187,7 +187,7 @@ e_magic[EI_ABIVERSION]);
 }
 
 /**
- * print_filetype - Prints the type of an ELF header.
+ * print_type - Prints the type of an ELF header.
  * @e_type: The ELF type.
  * @e_magic: A pointer to an array containing the ELF magic numbers
  */
