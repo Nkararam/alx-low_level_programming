@@ -30,6 +30,11 @@ exit(98);
 }
 }
 r = read(fd, *buf, BUFSIZE);
+if (r == -1)
+{
+dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file);
+exit(98);
+}
 return (r);
 }
 /**
@@ -96,4 +101,3 @@ close_file(source_file);
 close_file(target_file);
 return (0);
 }
-
