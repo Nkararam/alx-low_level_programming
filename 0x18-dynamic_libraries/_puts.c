@@ -1,11 +1,7 @@
 #include "main.h"
-#include <stdio.h>
+#include<stdio.h>
 
 void _puts(char *str)
-{
-puts(str);
-}
-
 /**
  * main - Entry point
  *
@@ -13,6 +9,6 @@ puts(str);
  */
 int main(void)
 {
-_puts("\"Programming is like building a multilingual puzzle");
+puts("\"Programming is like building a multilingual puzzle");
 return (0);
 }
